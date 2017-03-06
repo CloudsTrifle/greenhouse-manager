@@ -18,7 +18,10 @@ class TestTemperatureReadings(unittest.TestCase):
     def test_thermometer_handler_happy_path(self, mock_es, mock_temperature):
         mock_temperature.return_value = 10.6
         temperatures_handler.main()
-        mock_es.assert_called_with(body={'temp_greenhouse': 10.6, '@timestamp': mock.ANY, 'temp_outside': 10.6},
+        mock_es.assert_called_with(body={'temp_greenhouse': 10.6,
+                                         '@timestamp': mock.ANY,
+                                         'temp_outside': 10.6,
+                                         'ts': mock.ANY},
                                    doc_type='temperature_readings', id=mock.ANY, index='temperatures')
 
     @mock.patch.object(Thermometer, 'current_temperature')
@@ -32,7 +35,6 @@ class TestTemperatureReadings(unittest.TestCase):
 
         failed_uploads = archived_data_helper.retrieve_failed_uploads()
         assert(len(failed_uploads) == 3)
-
 
     @mock.patch.object(Thermometer, 'current_temperature')
     @mock.patch.object(Elasticsearch, 'index')

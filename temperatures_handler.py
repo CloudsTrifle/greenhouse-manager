@@ -35,11 +35,7 @@ def main():
                 index='temperatures',
                 doc_type='temperature_readings',
                 id=data['ts'],
-                body={
-                    '@timestamp': data['@timestamp'],
-                    'temp_greenhouse':data['temp_greenhouse'],
-                    'temp_outside':data['temp_outside']
-                     }
+                body=data
                 )
 
         archived_data_handler.clear_failed_uploads()
