@@ -10,6 +10,6 @@ ELASTICSEARCH_PORT = 9200
 ELASTICSEARCH_TIMESTAMP_FORMAT = '%Y-%m-%dT%H:%M:%S'
 
 # Archives
-FAILED_UPLOADS_PATH = 'C://greenhouse/failed_uploads/'
+FAILED_UPLOADS_PATH = '/dev/greenhouse/failed_uploads/'
 FAILED_UPLOADS_FILE = 'failed-uploads.txt'
 LOGGED_DATA_PATH = '/greenhouse/log'
