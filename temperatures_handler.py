@@ -2,11 +2,18 @@ print("Executing Thermometer Readings")
 
 import time
 import datetime
+
+print("config")
 import src.config as config
+
+print("archive")
 import src.archived_data_helper as archived_data_handler
+
+print("elastic")
 from elasticsearch import Elasticsearch
+
+print("thermometer")
 from src.thermometer import Thermometer
-import os
 
 
 def main():
