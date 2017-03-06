@@ -2,21 +2,14 @@ print("Executing Thermometer Readings")
 
 import time
 import datetime
-
-print("config")
 import src.config as config
-
-print("archive")
 import src.archived_data_helper as archived_data_handler
-
-print("elastic")
 from elasticsearch import Elasticsearch
-
-print("thermometer")
 from src.thermometer import Thermometer
 
-
+print("main")
 def main():
+    print("in main")
     greenhouse_thermometer = Thermometer(config.GREENHOUSE_THERMOMETER_ID)
     outside_thermometer = Thermometer(config.OUTSIDE_THERMOMETER_ID)
 
