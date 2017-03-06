@@ -1,4 +1,4 @@
-import greenhousemanager.config as config
+import src.config as config
 
 
 class Thermometer:

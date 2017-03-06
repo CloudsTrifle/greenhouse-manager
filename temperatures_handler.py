@@ -1,9 +1,9 @@
 import time
 import datetime
-import greenhousemanager.config as config
-import greenhousemanager.archived_data_helper as archived_data_handler
+import src.config as config
+import src.archived_data_helper as archived_data_handler
 from elasticsearch import Elasticsearch
-from greenhousemanager.thermometer import Thermometer
+from src.thermometer import Thermometer
 import os
 
 

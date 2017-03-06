@@ -1,9 +1,11 @@
-import mock
 import unittest
+
+import mock
 from elasticsearch import Elasticsearch
-from greenhousemanager import archived_data_helper
-from greenhousemanager import temperatures_handler
-from greenhousemanager.thermometer import Thermometer
+
+import temperatures_handler
+from src import archived_data_helper
+from src.thermometer import Thermometer
 
 
 class TestTemperatureReadings(unittest.TestCase):

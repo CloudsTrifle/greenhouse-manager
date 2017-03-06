@@ -1,5 +1,5 @@
 from os import path
-from greenhousemanager import config
+from src import config
 import os
 
 
