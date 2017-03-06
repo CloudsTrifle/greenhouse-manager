@@ -1,3 +1,5 @@
+print("Executing Thermometer Readings")
+
 import time
 import datetime
 import src.config as config
@@ -8,7 +10,6 @@ import os
 
 
 def main():
-    print("Executing Thermometer Readings")
     greenhouse_thermometer = Thermometer(config.GREENHOUSE_THERMOMETER_ID)
     outside_thermometer = Thermometer(config.OUTSIDE_THERMOMETER_ID)
 
