@@ -17,7 +17,6 @@ def append_to_failed_uploads(temperature_reading):
     if path.isfile("%s%s" % (config.FAILED_UPLOADS_PATH, config.FAILED_UPLOADS_FILE)):
         failed_uploads_file = open("%s%s" % (config.FAILED_UPLOADS_PATH, config.FAILED_UPLOADS_FILE), 'a')
     else:
-        os.makedirs(config.FAILED_UPLOADS_PATH, exist_ok=True)
         failed_uploads_file = open("%s%s" % (config.FAILED_UPLOADS_PATH, config.FAILED_UPLOADS_FILE), 'w+')
     failed_uploads_file.write(str(temperature_reading))
     failed_uploads_file.write('\n')
@@ -28,7 +27,6 @@ def clear_failed_uploads():
     if path.isfile("%s%s" % (config.FAILED_UPLOADS_PATH, config.FAILED_UPLOADS_FILE)):
         failed_uploads_file = open("%s%s" % (config.FAILED_UPLOADS_PATH, config.FAILED_UPLOADS_FILE), 'w+')
         failed_uploads_file.close()
-
 
 def append_to_log(temperature_reading):
     pass
