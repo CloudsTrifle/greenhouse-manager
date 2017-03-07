@@ -5,6 +5,7 @@ import src.archived_data_helper as archived_data_handler
 from elasticsearch import Elasticsearch
 from src.thermometer import Thermometer
 
+
 def main():
     greenhouse_thermometer = Thermometer(config.GREENHOUSE_THERMOMETER_ID)
     outside_thermometer = Thermometer(config.OUTSIDE_THERMOMETER_ID)
